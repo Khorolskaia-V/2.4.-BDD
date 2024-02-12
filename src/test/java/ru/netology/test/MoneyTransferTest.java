@@ -26,8 +26,8 @@ public class MoneyTransferTest {
         var verificationPage = loginPage.validLogin(authInfo);
         var verificationCode = getVerificationCode();
         dashboardPage = verificationPage.validVerify(verificationCode);
-
-
+        firstCardInfo = getFirstCardInfo();
+        secondCardInfo = getSecondCardInfo();
     }
 
     @Test
@@ -60,6 +60,5 @@ public class MoneyTransferTest {
         assertEquals(firstCardBalance, actualBalanceFirstCard);
         assertEquals(secondCardBalance, actualBalanceSecondCard);
     }
-
 
 }
